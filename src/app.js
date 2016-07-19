@@ -14,45 +14,64 @@ var App = React.createClass({
       tiles: [
         "", "", "",
         "", "", "",
-        "", "", "",
+        "", "", ""
       ],
+
+      turn: 'x'
+
     };
   },
 
+
+
+  tileClick: function(position,player){
+    var tiles = this.state.tiles;
+    tiles[position] = player;
+    this.setState({tiles: tiles, turn: player = 'x' ? 'o' : 'x'});
+
+  },
+
+
   render: function() {
-    return (
-      <div>
+    return <div>
         <h3>Noughts and Crosses</h3>
         <div id = "game">
-          {this.state.tiles.map(function () {
+          {this.state.tiles.map(function (tile, position) {
           return (
-            <Tile/>
+            <Tile status={tile} key={position} turn = {this.state.turn} tileClick = {this.tileClick}/>
           );
           }, this) }
         </div>
         <Menu/>
-      </div>
-    )}
-});
-
-
-////THIS IS THE MENU, WHERE CURRENT PLAYER TURN, OPTION TO RESET/PLAY AGAIN WILL BE DISPLAYED
-var Menu = React.createClass({
-  render: function () {
-    return <div id="menu"></div>;
-
-  }
+      </div>;
+    }
 });
 
 
 
 /////THE TILES COMPONENT
 var Tile = React.createClass({
+    clickHandler: function () {
+      this.props.tileClick(this.props.key, this.props.turn);
+    },  
+  
   render: function () {
-    return <div className = 'tile'></div>;
+    return <div className = {this.props.status === '' ? 'tile' : 'tile status-' + this.props.status} onClick = {this.clickHandler}>
+      {this.props.status}
+    </div>;
   }
 });
 
+
+////THIS IS THE MENU, WHERE CURRENT PLAYER TURN, OPTION TO RESET/PLAY AGAIN WILL BE DISPLAYED
+
+
+var Menu = React.createClass({
+  render: function () {
+    return <div id="menu"></div>;
+
+  }
+});
 
 
 ReactDOM.render(<App />,
