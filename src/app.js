@@ -24,7 +24,7 @@ var App = React.createClass({
 
 
 
-  tileClick: function(position,player){
+  tileClick: function(position, player){
     var tiles = this.state.tiles;
     tiles[position] = player;
     this.setState({tiles: tiles, turn: player = 'x' ? 'o' : 'x'});
@@ -38,7 +38,7 @@ var App = React.createClass({
         <div id = "game">
           {this.state.tiles.map(function (tile, position) {
           return (
-            <Tile status={tile} key={position} turn = {this.state.turn} tileClick = {this.tileClick}/>
+            <Tile status={tile} pos={position} turn = {this.state.turn} tileClick = {this.tileClick}/>
           );
           }, this) }
         </div>
@@ -52,9 +52,9 @@ var App = React.createClass({
 /////THE TILES COMPONENT
 var Tile = React.createClass({
     clickHandler: function () {
-      this.props.tileClick(this.props.key, this.props.turn);
-    },  
-  
+      this.props.tileClick(this.props.pos, this.props.turn);
+    },
+
   render: function () {
     return <div className = {this.props.status === '' ? 'tile' : 'tile status-' + this.props.status} onClick = {this.clickHandler}>
       {this.props.status}
