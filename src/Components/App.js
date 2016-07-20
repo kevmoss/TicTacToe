@@ -24,19 +24,19 @@ var App = React.createClass({
 
 
   
-
-  getCol: function (i) {
-    return (i % 3);
-  },
-
-  checkDiagonal: function () {
-
-  },
-
-
-  checkMoves: function () {
-    
-  },
+  //
+  // getCol: function (i) {
+  //   return (i % 3);
+  // },
+  //
+  // checkDiagonal: function () {
+  //
+  // },
+  //
+  //
+  // checkMoves: function () {
+  //  
+  // },
 
   tileClick: function(position, player, e){
     if(e.target.innerHTML) return;
