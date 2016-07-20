@@ -6,7 +6,11 @@
 #game, #game * {
 
     box-sizing: content-box;
+    position: relative;
 }
+
+
+
 
 #game {
     width: 300px;
@@ -21,7 +25,7 @@
 #game .tile {
     width: 100px;
     height: 100px;
-    outline: 5px solid #333333;
+    outline: 3px solid #777777;
     float: left;
     line-height: 88px;
     text-align: center;

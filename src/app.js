@@ -1,8 +1,6 @@
 /**
  * Created by KevinMoss on 19/07/2016.
  */
-
-
 var React = require('react');
 var ReactDOM = require('react-dom');
 
@@ -12,23 +10,28 @@ var App = React.createClass({
   getInitialState: function() {
     return {
       tiles: [
-        "", "", "",
-        "", "", "",
-        "", "", ""
+        "", "", "", "", "", "", "", "", ""
       ],
 
-      turn: 'x'
 
+      ///flag : true,
+      turn : 'x'
     };
   },
 
-
-
+  // changeFlag: function () {
+  //   this.setState({})
+  // },
+  
+  
   tileClick: function(position, player){
     var tiles = this.state.tiles;
     tiles[position] = player;
-    this.setState({tiles: tiles, turn: player = 'x' ? 'o' : 'x'});
+    this.setState({tiles: tiles, turn: this.state.turn === 'x' ? 'o' : 'x'});
 
+
+
+    ///flag: this.state.flag ? false : true,
   },
 
 
@@ -48,6 +51,13 @@ var App = React.createClass({
 });
 
 
+
+
+var currentState = React.createClass({
+    render: function () {
+
+    }
+});
 
 /////THE TILES COMPONENT
 var Tile = React.createClass({
