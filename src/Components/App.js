@@ -10,15 +10,17 @@ var App = React.createClass({
         "", "", "", "", "", "", "", "", ""
       ],
 
-
-      ///flag : true,
       turn : 'x'
     };
-  },
+    // where are the tiles?
+    // is there a winning formula?
+    // has the game finished/drawn
+    // if not, carry on.
 
-  // changeFlag: function () {
-  //   this.setState({})
-  // },
+
+    // If there's a winner OR if the tiles are full
+    // return;
+  },
 
 
   tileClick: function(position, player, e){
@@ -28,8 +30,6 @@ var App = React.createClass({
     this.setState({tiles: tiles, turn: this.state.turn === 'x' ? 'o' : 'x'});
 
 
-
-    ///flag: this.state.flag ? false : true,
   },
 
 
@@ -48,10 +48,5 @@ var App = React.createClass({
   }
 });
 
-// var currentState = React.createClass({
-//     render: function () {
-//
-//     }
-// });
 
 module.exports = App;
