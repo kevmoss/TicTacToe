@@ -1,13 +1,17 @@
-/**
- * Created by stephensmith on 19/07/2016.
- */
-
-
+var React = require('react');
 
 
 /////THE TILES COMPONENT
 var Tile = React.createClass({
+    clickHandler: function () {
+        this.props.tileClick(this.props.pos, this.props.turn);
+    },
+
     render: function () {
-        return <div className = 'tile'></div>;
+        return <div className = {this.props.status === '' ? 'tile' : 'tile status-' + this.props.status} onClick = {this.clickHandler}>
+            {this.props.status}
+        </div>;
     }
 });
+
+module.exports = Tile;
