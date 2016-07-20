@@ -3,8 +3,8 @@ var React = require('react');
 
 /////THE TILES COMPONENT
 var Tile = React.createClass({
-    clickHandler: function () {
-        this.props.tileClick(this.props.pos, this.props.turn);
+    clickHandler: function (e) {
+        this.props.tileClick(this.props.pos, this.props.turn, e);
     },
 
     render: function () {

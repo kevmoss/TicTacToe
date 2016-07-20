@@ -21,7 +21,8 @@ var App = React.createClass({
   // },
 
 
-  tileClick: function(position, player){
+  tileClick: function(position, player, e){
+    if(e.target.innerHTML) return;
     var tiles = this.state.tiles;
     tiles[position] = player;
     this.setState({tiles: tiles, turn: this.state.turn === 'x' ? 'o' : 'x'});
