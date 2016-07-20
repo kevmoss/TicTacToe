@@ -12,15 +12,31 @@ rules.getCol = function (colnum, tiles) {
     });
 };
 
-// rules.getDiag = function (i, tiles) {
-//   var diag = ()  
+
+rules.getDiagonal = function (player, tiles){
+    
+    var arr = ['x', 'o', '', 'o', 'x', '', '', '', 'x'];
+
+    var diagonalArr = [arr[0], arr[4], arr[8]];
+
+    //return diagonalArr.every(function(elm){
+        //return elm === player;
+    });
+};
+
+//
+// ////top left to bottom right
+// rules.getDiagonalTB = function (diagnum, tiles) {
+//     return tiles.filter(function (tile, index) {
+//         return (index % 4) === diagnum;
+//     })
 // };
+//
 
-rules.getDiagonalTB = function (diagnum, tiles) {
-    return tiles.filter(function (tile, index) {
-        return ((3+1)) === diagnum;
-    })
-}
-
-
+/////bottom right to top left
+// rules.getDiagonalBT = function (diagnum, tiles) {
+//     return tiles.filter(function (tile,index) {
+//         return (index % 2) === diagnum
+//     })
+//}
 module.exports = rules;

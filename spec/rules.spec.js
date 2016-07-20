@@ -38,13 +38,37 @@ describe('rules', function () {
     it('is an object', function () {
         expect(rules).to.be.an('object')
     });
-    describe('getDiagonalTB', function () {
+    describe('getDiagonal', function () {
         it('is a function', function () {
-            expect(rules.getDiagonalTB).to.be.a('function')
+            expect(rules.getDiagonal).to.be.a('function')
         });
         it('does stuff', function () {
-            var tiles = ['x', '', '', '', 'x', '', '', '', 'x'];
-            expect(rules.getDiagonalTB(0, tiles)).to.eql(['x', 'x', 'x']);
+            var tiles = ['x', '', 'o', 'x', 'x', '', 'o', '', 'x'];
+            expect(rules.getDiagonal(0, tiles)).to.eql(['x', 'x', 'x']);
+        });   
+        it('does stuff', function () {
+            var tiles = ['x', '', 'o', '', 'x', '', 'o', '', 'x'];
+            expect(rules.getDiagonal(1, tiles)).to.eql(['o', 'x', 'o']);
         });
     });
 });
+//
+// describe('rules', function () {
+//     it('is an object', function () {
+//         expect(rules).to.be.an('object')
+//     });
+//     describe('getDiagonalBT', function () {
+//         it('is a function', function () {
+//             expect(rules.getDiagonalBT).to.be.a('function')
+//         });
+//         it('does stuff', function () {
+//             var tiles = ['x', '', 'o', '', 'x', '', 'o', '', 'x'];
+//             expect(rules.getDiagonalBT(0, tiles)).to.eql(['x', 'x', 'x']);
+//         });
+//         it('does stuff', function () {
+//             var tiles = ['x', '', 'o', '', 'x', '', 'o', '', 'x'];
+//             expect(rules.getDiagonalBT(1, tiles)).to.eql(['o', 'x', 'o']);
+//
+//         });
+//     });
+// });
