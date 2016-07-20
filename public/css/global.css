@@ -1,15 +1,31 @@
-#container {
+h1{
+    font-family: Copperplate;
+    padding: 0px;
+    margin: 10px;
+    float: center;
+
+}
+
+body {
+    font-family: Copperplate;
+    position: relative;
+    margin: 10px 400px;
+    padding: 10px;
+    width: 100%;
+    float: center;
+}
+
+
+.container {
     margin: 0px auto;
     width: 500px;
 }
 
-#game, #game * {
+/*#game, #game * {*/
 
-    box-sizing: content-box;
-    position: relative;
-}
-
-
+    /*box-sizing: content-box;*/
+    /*position: relative;*/
+/*}*/
 
 
 #game {
@@ -17,15 +33,13 @@
     height: 300px;
     padding: 0;
     margin: 0;
-    float: left;
-    outline: 1px solid #b4b4b4;
+    outline: 3px solid #90C3D4;
 
 }
-
-#game .tile {
+.tile {
     width: 100px;
     height: 100px;
-    outline: 3px solid #777777;
+    outline: 2px solid #90C3D4;
     float: left;
     line-height: 88px;
     text-align: center;
@@ -39,5 +53,4 @@
     padding-left: 35px;
     float: left;
 }
-
 

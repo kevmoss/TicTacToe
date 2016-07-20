@@ -52,7 +52,7 @@ var App = React.createClass({
 
   render: function() {
     return <div>
-      <h3>Noughts and Crosses</h3>
+      <h1>Noughts and Crosses</h1>
       <div id = "game">
         {this.state.tiles.map(function (tile, position) {
           return (
