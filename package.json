@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --content-base public"
+    "dev": "webpack-dev-server --inline --hot --content-base public",
+    "test": "mocha spec"
   },
   "author": "",
   "license": "ISC",
@@ -13,11 +14,13 @@
     "react-dom": "^15.2.1"
   },
   "devDependencies": {
-    "webpack": "^1.13.1",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-validator": "^2.2.3"
   }

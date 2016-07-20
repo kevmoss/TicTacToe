@@ -23,11 +23,28 @@ var App = React.createClass({
   },
 
 
+  
+
+  getCol: function (i) {
+    return (i % 3);
+  },
+
+  checkDiagonal: function () {
+
+  },
+
+
+  checkMoves: function () {
+    
+  },
+
   tileClick: function(position, player, e){
     if(e.target.innerHTML) return;
     var tiles = this.state.tiles;
     tiles[position] = player;
-    this.setState({tiles: tiles, turn: this.state.turn === 'x' ? 'o' : 'x'});
+    this.setState({tiles: tiles, turn: this.state.turn === 'x' ? 'o' : 'x'}, function(){
+      
+    });
 
 
   },
