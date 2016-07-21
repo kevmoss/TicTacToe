@@ -54,3 +54,9 @@ body {
     float: left;
 }
 
+.button {
+    padding: 20px;
+    margin:  20px;
+    background-color: #0b97c4;
+
+}

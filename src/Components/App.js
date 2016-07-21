@@ -2,6 +2,8 @@ var React = require('react');
 var Tile = require('./Tile.js');
 var Menu = require('./Menu.js');
 
+
+
 ///THIS IS THE GAME CONTAINER - THE OVERALL PARENT
 var App = React.createClass({
   getInitialState: function() {
@@ -10,7 +12,9 @@ var App = React.createClass({
         "", "", "", "", "", "", "", "", ""
       ],
 
-      turn : 'x'
+      turn: 'x',
+      ///gameIsFinished: false
+
     };
     // where are the tiles?
     // is there a winning formula?
@@ -22,21 +26,14 @@ var App = React.createClass({
     // return;
   },
 
+  toCheck: function(line){
+    var firstLine = line [0];
+    return _.every(line, function () {
+      return val === firstLine
 
-  
-  //
-  // getCol: function (i) {
-  //   return (i % 3);
-  // },
-  //
-  // checkDiagonal: function () {
-  //
-  // },
-  //
-  //
-  // checkMoves: function () {
-  //  
-  // },
+    })
+  },
+
 
   tileClick: function(position, player, e){
     if(e.target.innerHTML) return;
@@ -60,7 +57,7 @@ var App = React.createClass({
           );
         }, this) }
       </div>
-      <Menu/>
+      <Menu />
     </div>;
   }
 });
