@@ -1,4 +1,4 @@
-var React = require('react');
+  var React = require('react');
 var Tile = require('./Tile.js');
 var Menu = require('./Menu.js');
 
