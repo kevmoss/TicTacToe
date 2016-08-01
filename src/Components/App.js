@@ -49,7 +49,9 @@ var App = React.createClass({
 
   render: function() {
     return <div>
+      <div className="header">
       <h1>Noughts and Crosses</h1>
+        </div>
       <div id = "game">
         {this.state.tiles.map(function (tile, position) {
           return (
