@@ -1,10 +1,7 @@
-  var React = require('react');
+var React = require('react');
 var Tile = require('./Tile.js');
 var Menu = require('./Menu.js');
 
-
-
-///THIS IS THE GAME CONTAINER - THE OVERALL PARENT
 var App = React.createClass({
   getInitialState: function() {
     return {
@@ -43,9 +40,7 @@ var App = React.createClass({
       
     });
 
-
   },
-
 
   render: function() {
     return <div>
