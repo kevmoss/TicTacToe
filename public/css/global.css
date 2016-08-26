@@ -1,55 +1,57 @@
-*{
+* {
     font-family: 'Coming Soon', cursive;
 }
 
-body {
-    background-color: whitesmoke;
+body{
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
     cursor: hand;
     text-align: -webkit-center;
 }
 
-h1 {
-    margin-bottom: 50px;
+.app{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.message {
     color: mediumblue;
-
+    font-size: 38px;
+    text-align: center;
+    height: 30px;
 }
 
-#game {
-    width: 300px;
-    height: 300px;
-    padding: 0;
-    margin: 0;
+.grid{
+    margin: 0 auto;
+    height: 310px;
+    width: 330px;
+    background-color: whitesmoke;
+    border: 4px solid whitesmoke;
 }
 
-.tile {
+.cell {
+    margin: 4.5px;
+    background-color: mediumblue;
     width: 100px;
     height: 100px;
-    outline: solid whitesmoke thick;
-    float: left;
-    line-height: 88px;
-    text-align: center;
-    font-size: 60px;
-    background-color: mediumblue;
-    color: gold;
-
+    float:left;
 }
 
-/*.tile status-x {*/
-    /*color: #990000;*/
-/*}*/
+.cell h1 {
+    color: gold;
+    font-size: 70px;
+    margin-top: 5px;
+}
 
-/*.tile status-o {*/
-    /*color: #006600;*/
-/*}*/
-
-
-#menu {
-   margin-top: 50px;
+.winner {
+    color: mediumblue;
 }
 
 .button {
-    height: 50px;
+    height: 30px;
     width: 150px;
+    padding-top: 5px;
     font-size: inherit;
 }
-
