@@ -5,13 +5,14 @@
   "main": "app.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --content-base public",
-    "test": "mocha spec"
+    "test": "mocha ./spec"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^15.2.1",
-    "react-dom": "^15.2.1"
+    "react-dom": "^15.2.1",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
