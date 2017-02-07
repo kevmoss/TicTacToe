@@ -1,15 +1,5 @@
 ## Noughts and Crosses with React
 
-In this two-day sprint you will be building a 3 x 3 Noughts and Crosses game that runs in the browser.
-
-NB To run your development environment with webpack:
-
-```
-$ npm run dev
-```
-And open `http://localhost:8080/` in your browser.
-
-
 ### Objectives
 
 1. To think carefully about the data that will be underlying your front-end user interface
@@ -27,15 +17,3 @@ And open `http://localhost:8080/` in your browser.
 3. Consider where to keep the state of your application and how you will pass it down to the components that need it.
 4. Give thought to how turns will work in your game (x always goes first), and to what happens when there is a winner, a tie, or when someone wants to reset the board.
 5. Style your game so that someone would really want to play it!
-
-
-##### Extra credit
-
-- Extend your board to 4 x 4 where a player wins by scoring three in a row
-- Have your app keep score, i.e. whilst the browser window is open, it tallies the number of wins for each player
-- Implement the option of playing against the computer. How smart can you make your computer? Is it possible to make it unbeatable?
-
-
-#### Resources
-
-[Interactive explanation of a package.json file](http://browsenpm.org/package.json)
